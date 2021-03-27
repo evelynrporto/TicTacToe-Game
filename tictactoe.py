@@ -45,7 +45,8 @@ def desenhar_formas():
                 pygame.draw.circle(tela, CIRCLE_COLOR, (int( col * 200 + 100), int (row * 200 + 100)), CIRCLE_RADIUS, CIRCLE_WIDTH )
             elif matriz[row][col] == 2:
                 pygame.draw.line(tela, CROSS_COLOR, (col * 200 + SPACE, row * 200 + 200 - SPACE), (col * 200 + 200 - SPACE, row * 200 + SPACE), CROSS_WIDTH )
-                pygame.draw.line(tela, CROSS_COLOR, (col * 200 + SPACE, row * 200 + SPACE), (col * 200 + 200 - SPACE, row * 200 + 200 - SPACE), CROSS_WIDTH ) 
+                pygame.draw.line(tela, CROSS_COLOR, (col * 200 + SPACE, row * 200 + SPACE), (col * 200 + 200 - SPACE, row * 200 + 200 - SPACE), CROSS_WIDTH )
+                 
 def mark_square(row, col, player): 
     matriz[row][col] = player
 
