@@ -122,7 +122,12 @@ def desenhar_desc_diagonal(player):
     pygame.draw.line(tela, color, (15,15), (WIDTH - 15, HEIGHT - 15), 15)
 
 def restart():
-    pass
+    tela.fill(BACKGROUND)
+    fazer_linhas()
+    player = 1
+    for row in range(MAT_LINHAS):
+        for col in range(MAT_COLUNAS):
+            matriz[row][col] = 0
 
 fazer_linhas()
 
@@ -157,6 +162,8 @@ while True:
                     player = 1
 
                 desenhar_formas()
-        
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_r:
+                restart()
 
     pygame.display.update()
